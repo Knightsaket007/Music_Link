@@ -1,0 +1,292 @@
+body {
+    background-color: blueviolet;
+    background: url("bg.svg");
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+
+}
+
+@media(max-width:800px) {
+    body {
+        background-size: 100%;
+        background-attachment: fixed;
+        width: 100%;
+        overflow-x: hidden;
+    }
+}
+
+#heading {
+    height: 100px;
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+    /* background-color: chocolate; */
+    margin-top: 100px;
+}
+
+#heading p {
+    font-size: 60px;
+    font-weight: 600;
+    /* font-family: 'Rajdhani', sans-serif; */
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    /* color: rgb(61, 72, 88); */
+    color: white;
+    text-shadow: rgba(0, 0, 0, 0.1) 0px 10px 0.02em;
+    animation: fadeIn 3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        color: transparent;
+        text-shadow: none;
+    }
+
+    to {
+        color: white;
+    }
+}
+
+#heading h1 {
+    font-family: 'Rajdhani', sans-serif;
+    margin: 0px;
+    font-weight: 1000;
+    color: rgb(244, 245, 250);
+    animation: fadeInSlideDown 2s ease-in-out;
+}
+
+@keyframes fadeInSlideDown {
+    from {
+        opacity: 0;
+        /* Start with invisible text */
+        transform: translateY(10px);
+        /* Start 50px above its original position */
+    }
+
+    to {
+        opacity: 1;
+        /* End with fully visible text */
+        transform: translateY(0);
+        /* End at its original position */
+    }
+}
+
+
+#main-content-container {
+    width: 100%;
+    height: 700px;
+    background-color: black;
+    position: absolute;
+    top: -60px;
+    background: linear-gradient(transparent 0%, transparent 30vh, rgb(0, 0, 0) 100vh);
+    padding-top: 380px;
+}
+
+@media(max-width:800px) {
+    #main-content-container {
+
+        top: -280px;
+
+    }
+}
+
+.links {
+    width: 45%;
+    height: 60px;
+    background-color: rgba(135, 171, 175, 0.808);
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border-radius: 30px;
+
+}
+
+.left {
+    animation: slidyLeft 1s ease-out;
+}
+
+.right {
+    animation: slidyRight 1s ease-out;
+}
+
+@keyframes slidyLeft {
+    0% {
+        transform: translateX(-20%);
+        /* Slide in from the left */
+    }
+
+    100% {
+        transform: translateX(0);
+        /* Slide to its original position (centered) */
+    }
+}
+
+@keyframes slidyRight {
+    0% {
+        transform: translateX(20%);
+        /* Slide in from the left */
+    }
+
+    100% {
+        transform: translateX(0);
+        /* Slide to its original position (centered) */
+    }
+}
+
+.size {
+    width: 40px;
+    height: 60px;
+}
+
+.links svg {
+    margin-left: 10px;
+}
+
+.links:hover {
+
+    transform: translateY(-5%);
+
+}
+
+#link-title {
+    font-family: 'Rajdhani', sans-serif;
+    color: aliceblue;
+    font-size: 25px;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: -50px;
+}
+
+.links:hover .arrow {
+   transform: translatex(5%);
+}
+
+.links:hover #spotify {
+    fill: rgb(7, 128, 7);
+}
+
+.links:hover #apple {
+    fill: rgb(183, 9, 199);
+}
+
+.links:hover #youtube {
+    fill: rgb(241, 73, 43);
+}
+
+.links:hover #youtube-music {
+    fill: rgb(71, 25, 8);
+}
+
+.links:hover #tidal {
+    fill: rgb(94, 7, 116);
+}
+
+.links:hover #amazon-music {
+    fill: rgb(9, 85, 199);
+}
+
+.links:hover #deezer {
+    fill: rgb(243, 207, 5);
+}
+
+.arrow {
+    fill: white;
+    float: right;
+}
+
+.arrow-svg {
+    transform: rotate(90deg);
+    height: fit-content;
+    margin: 18px 15px 0px 0px
+}
+
+@media(max-width:666px) {
+
+    body {
+        background-size: cover;
+        background-size: auto 450px;
+    }
+
+    #main-content-container {
+        top: -300px;
+        padding-top: 500px;
+    }
+
+    #heading p {
+        font-size: 30px;
+        color: aliceblue;
+    }
+
+    #heading h1 {
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    .links {
+        height: 50px;
+        width: 80%;
+    }
+
+    #link-title {
+        font-family: 'Rajdhani', sans-serif;
+        color: aliceblue;
+        font-size: 20px;
+        width: fit-content;
+        margin: 0 auto;
+        margin-top: -41px;
+    }
+
+    .arrow {
+        fill: white;
+        float: right;
+        height: 50px;
+    }
+
+    .arrow-svg {
+        transform: rotate(90deg);
+        height: fit-content;
+        margin: 15px 15px 0px 0px
+    }
+
+    .size {
+        width: 30px;
+        height: 50px;
+    }
+
+
+}
+
+@media(min-width:667px)and (max-width: 800px) {
+
+    #main-content-container {
+        width: 100%;
+        height: 700px;
+        background-color: black;
+        position: absolute;
+        top: -190px;
+        background: linear-gradient(transparent 0%, transparent 30vh, rgb(0, 0, 0) 100vh);
+        padding-top: 480px;
+    }
+
+    .links {
+        width: 70%;
+    }
+
+    #link-title {
+        margin-top: -48px;
+    }
+
+    #heading p {
+        font-size: 45px;
+        color: aliceblue;
+    }
+
+    #heading h1 {
+        font-size: 25px;
+        font-weight: 510;
+    }
+
+}
